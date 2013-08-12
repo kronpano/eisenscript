@@ -1,3 +1,0 @@
-[submodule "app/scripts/app/libs/eisenscript"]
-	path = app/scripts/app/libs/eisenscript
-	url = git@github.com:after12am/eisenscript.git

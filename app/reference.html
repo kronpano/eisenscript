@@ -41,87 +41,113 @@
           </header>
           <h3>Transformations</h3>
           <p>
+            <script type="text/eisenscript" id="transform-x">
+            { x 10 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-x">
               <dl>
                 <dt>x [float]</dt>
-                <dd>X axis translation. The float argument is the offset measured in units of the local coordinate system.</dd>
+                <dd>Move on the x axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-y">
+            { y 10 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-y">
               <dl>
                 <dt>y [float]</dt>
-                <dd>Y axis translation. As above.</dd>
+                <dd>Move on the y axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-z">
+            { z 10 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-z">
               <dl>
                 <dt>z [float]</dt>
-                <dd>Z axis translation. As above.</dd>
+                <dd>Move on the z axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-rx">
+            { rx 45 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-rx">
               <dl>
                 <dt>rx [float]</dt>
-                <dd>Rotation about the x axis. The 'float' argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -> (1, 0.5, 0.5).</dd>
+                <dd>Rotation about the x axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-ry">
+            { ry 45 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-ry">
               <dl>
                 <dt>ry [float]</dt>
-                <dd>Rotation about the y axis. As above.</dd>
+                <dd>Rotation about the y axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-rz">
+            { rz 45 s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-rz">
               <dl>
                 <dt>rz [float]</dt>
-                <dd>Rotation about the z axis. As above.</dd>
+                <dd>Rotation about the z axis.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-s">
+            { s 10 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-s">
               <dl>
                 <dt>s [float]</dt>
-                <dd>Resizes the local coordinate system. Notice that the center for the resize is located at the center of the unit cube in the local system (at (0.5,0.5,0.5)</dd>
+                <dd>Scale in the x, y and z axis by the same amount.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
           <p>
+            <script type="text/eisenscript" id="transform-s3">
+            { s 1 10 1 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-s3">
               <dl>
                 <dt>s [float] [float] [float]</dt>
-                <dd>Resizes the local coordinate system. As above but with separate scale for each dimension.</dd>
+                <dd>Scale in the x, y and z axis independently.</dd>
               </dl>
               <div class="demo"></div>
               <div class="code"></div>
             </div>
           </p>
-          <!--
-          <p>
+          <!-- <p>
+            <script type="text/eisenscript" id="transform-matrix">
+            { m 1 0 0 0 1 0 0 0 1 } box
+            </script>
             <div class="clearfix item" data-bind-id="#transform-matrix">
               <dl>
                 <dt>m [f1] ... [f9]</dt>
@@ -130,9 +156,7 @@
               <div class="demo"></div>
               <div class="code"></div>
             </div>
-          </p>
-          -->
-        </article>
+          </p> -->
         </article>
       </div>
     </div>
@@ -156,33 +180,6 @@
       </div>
     </div>
   </div>
-<script type="text/eisenscript" id="transform-x">
-{ x 10 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-y">
-{ y 10 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-z">
-{ z 10 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-rx">
-{ rx 45 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-ry">
-{ ry 45 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-rz">
-{ rz 45 s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-s">
-{ s 10 } box
-</script>
-<script type="text/eisenscript" id="transform-s3">
-{ s 1 10 1 } box
-</script>
-<script type="text/eisenscript" id="transform-matrix">
-{ m 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 } box
-</script>
 <script src="scripts/app/vendors/underscore-min.js"></script>
 <script src="scripts/app/vendors/backbone-min.js"></script>
 <script src="scripts/app/vendors/three.min.js"></script>

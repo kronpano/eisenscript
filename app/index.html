@@ -52,10 +52,6 @@
               <li><a href="https://github.com/mrdoob/three.js/" target="_blank">three.js</a></li>
               <li><a href="http://get.webgl.org/" target="_blank">WebGL</a></li>
             </ul>
-            <span>And we also need this on this document.</span>
-            <ul class="require">
-              <li><a class="worker" href="#">Web Worker</a></li>
-            </ul>
           </p>
         </article>
       </div>
@@ -80,15 +76,5 @@
       </div>
     </div>
   </div>
-<script type="text/javascript">
-$(function() {
-  // if WebWorker is supported
-  $('.worker').click(function() {
-    var support = window.Worker !== undefined;
-    alert(support ? 'your browser seems to support WebWorker.' : 'your browser does not seem to support WebWorker.');
-    return false;
-  });
-})
-</script>
 </body>
 </html>

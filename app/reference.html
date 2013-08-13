@@ -39,6 +39,14 @@
             <span class="byline">It does not matter how slowly you go as long as you do not stop.</span>
             <cite>Confucius</cite>
           </header>
+          <h3>Termination criteria</h3>
+          <p>
+            <a class="button next" style="margin: 20px 0 30px 0">Under Construction</a>
+          </p>
+          <h3>Rule modifiers</h3>
+          <p>
+            <a class="button next" style="margin: 20px 0 30px 0">Under Construction</a>
+          </p>
           <h3>Transformations</h3>
           <p>
             <script type="text/eisenscript" id="transform-x">
@@ -144,9 +152,10 @@
               <div class="code"></div>
             </div>
           </p>
-          <!-- <p>
+          <p>
             <script type="text/eisenscript" id="transform-matrix">
             { m 1 0 0 0 1 0 0 0 1 } box
+            // -> not good
             </script>
             <div class="clearfix item" data-bind-id="#transform-matrix">
               <dl>
@@ -156,7 +165,116 @@
               <div class="demo"></div>
               <div class="code"></div>
             </div>
-          </p> -->
+          </p>
+          <h3>Color space transformations</h3>
+          <p>
+            <script type="text/eisenscript" id="color-hue">
+            10 * { x 1 hue 36 } 10 * { y 1 hue 36 } 10 * { z 1 hue 36 } box
+            </script>
+            <div class="clearfix item" data-bind-id="#color-hue">
+              <dl>
+                <dt>h / hue [float]</dt>
+                <dd>Add num to the hue value, wrapping from 360° to 0°.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-sat">
+            10 * { x 1 sat 0.9 } 10 * { y 1 sat 0.9 } 10 * { z 1 sat 0.9 } box
+            </script>
+            <div class="clearfix item" data-bind-id="#color-sat">
+              <dl>
+                <dt>sat [float]</dt>
+                <dd>Add num to the saturation value, wrapping from 0 to 1.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-brightness">
+            10 * { x 1 b 0.95 } 10 * { y 1 b 0.95 } 10 * { z 1 b 0.95 } box
+            </script>
+            <div class="clearfix item" data-bind-id="#color-brightness">
+              <dl>
+                <dt>b / brightness [float]</dt>
+                <dd>Add num to the brightness value, wrapping from 0 to 1.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-alpha">
+            10 * { x 1 a 0.8 } 10 * { y 1 a 0.8 } 10 * { z 1 a 0.8 } box
+            // -> not good
+            </script>
+            <div class="clearfix item" data-bind-id="#color-alpha">
+              <dl>
+                <dt>a / alpha [float]</dt>
+                <dd>Add num to the brightness value, wrapping from 0 to 1.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-color">
+            10 * { x 1 color #f00 } box
+            10 * { y 1 color #0f0 } box
+            10 * { z 1 color #00f } box
+            </script>
+            <div class="clearfix item" data-bind-id="#color-color">
+              <dl>
+                <dt>color [color]</dt>
+                <dd>Set specified color.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-blend">
+            10 * { x 1 color #f00 } 10 * { y 1 blend #0f0 .04 } 10 * { z 1 blend #0f0 .04 } box
+            </script>
+            <div class="clearfix item" data-bind-id="#color-blend">
+              <dl>
+                <dt>blend [color] [strength]</dt>
+                <dd>Blends the current color with the specified color.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-color-random">
+            10 * { x 1 color random } 10 * { y 1 color random } 10 * { z 1 color random } box
+            // -> got a error
+            </script>
+            <div class="clearfix item" data-bind-id="#color-color-random">
+              <dl>
+                <dt>set color random</dt>
+                <dd>Chooses a random color.</dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
+          <p>
+            <script type="text/eisenscript" id="color-color-scheme">
+            // -> untested
+            </script>
+            <div class="clearfix item" data-bind-id="#color-color-scheme">
+              <dl>
+                <dt>set colorpool [scheme]</dt>
+                <dd></dd>
+              </dl>
+              <div class="demo"></div>
+              <div class="code"></div>
+            </div>
+          </p>
         </article>
       </div>
     </div>

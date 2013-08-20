@@ -1,40 +1,75 @@
 var Editor = Backbone.View.extend({
   
+  el: $('#editor'),
+  
   initialize: function(option) {
-    this.text = option.text;
-    this.addEditor();
-    this.addCanvas();
+    this.option = option || {};
+    this.queue;
+    this.lock = false;
+    this.resize();
+    this.setEditor();
+    this.setCanvas();
   },
   
-  addEditor: function() {
-    // append to
-    var elem = this.$el.find('.code:first');
-    this.editor = CodeMirror(elem[0], {
+  resize: function() {
+    // var pad_top = (+$('#content').css('padding-top').replace('px', ''));
+    // var pad_bot = (+$('#content').css('padding-bottom').replace('px', ''));
+    this.$el.css({
+      height: $(window).height() - 1
+    });
+    $('#content').css('padding', 0);
+  },
+  
+  change: function(cm) {
+    this.render(cm.getValue());
+  },
+  
+  setEditor: function() {
+    this.editor = CodeMirror(this.$el[0], {
       lineNumbers: true,
       lineWrapping: true,
-      theme: 'solarized dark',
+      theme: 'solarized light',
       tabSize: 2,
-      value: this.text,
-      readOnly: true
-      // onChange: this.render
-    }).setSize('auto', '160px');
+      value: this.option.code || '{ a .5 color #333 } box\n{ x 2 } box',
+      readOnly: false
+    })
+    // this.editor.setSize('auto', this.$el.height());
+    this.editor.setSize('auto', 'auto');
+    this.editor.on("change", $.proxy(this.change, this));
+    return this;
   },
   
-  addCanvas: function() {
-    // append to
-    var elem = this.$el.find('.demo:first');
+  setCanvas: function() {
     this.renderer = new es.TestRenderer([], {
-      width: elem.width(),
-      height: elem.height()
+      width: this.$el.width(),
+      height: this.$el.height()
     });
-    elem.append(this.renderer.domElement);
+    this.renderer.d = 15;
+    this.renderer.updateCamera();
+    this.$el.prepend(this.renderer.domElement);
+    return this;
   },
   
-  render: function() {
-    // compiling...
-    var eisen = es.compile(this.text);
-    // rendering...
-    this.renderer.build(eisen.objects).render();
+  render: function(code) {
+    if (this.lock) {
+      this.queue = code;
+      return;
+    }
+    // compile and render
+    this.lock = true;
+    try {
+      var eisen = es.compile(code || this.editor.getValue());
+      this.renderer.build(eisen.objects).render();
+    } catch (e) {
+      
+    }
+    this.lock = false;
+    // render if queue exists
+    if (this.queue) {
+      var code = this.queue;
+      this.queue = undefined;
+      this.render(code);
+    }
     return this;
   }
 });

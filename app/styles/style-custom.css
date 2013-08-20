@@ -14,22 +14,43 @@ ul.require {
 /************************************************************************************
   REFERENCE
 *************************************************************************************/
-#reference .item {
-  margin-bottom: 50px;
+#reference h3 {
+  font-size: 1.5em;
+  margin-top: 44px;
 }
 
 #reference dt {
   font-weight: bold;
 }
 
-#reference .demo {
-  background: #e8e8e8;
-  background-image: url('images/bg2.png');
-  width: 48%;
-  height: 160px;
-  float: left;
-  margin-right: 2%;
-  margin-bottom: 16px;
+#reference .item .demo {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+/************************************************************************************
+  EDITOR
+*************************************************************************************/
+#editor .CodeMirror {
+  border: 0;
+  font-size: 13px;
+  opacity: .7;
+}
+
+#editor canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#editor .editor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 

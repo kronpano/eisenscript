@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+  Striped 2.0 by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EisenScript</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="A programming language for generating 3d structures in real time in your browser." />
+<meta name="keywords" content="EisenScript eisenscript eisenscript.js javascript generative" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+<script src="scripts/layout/jquery.min.js"></script>
+<script src="scripts/layout/config.js"></script>
+<script src="scripts/layout/skel.min.js"></script>
+<script src="scripts/layout/skel-panels.min.js"></script>
+<noscript>
+<link rel="stylesheet" href="styles/skel-noscript.css" />
+<link rel="stylesheet" href="styles/style.css" />
+<link rel="stylesheet" href="styles/style-desktop.css" />
+<link rel="stylesheet" href="styles/style-wide.css" />
+<link rel="stylesheet" href="styles/style-custom.css" />
+</noscript>
+<link rel="stylesheet" href="styles/codemirror.css">
+<link rel="stylesheet" href="styles/solarized.css">
+</head>
+<body class="left-sidebar">
+<div id="wrapper">
+  <div id="content">
+    <div id="content-inner">
+      <div id="editor"></div>
+    </div>
+  </div>
+  <div id="sidebar">
+    <div id="logo">
+      <h1>EisenScript</h1>
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li class="current_page_item"><a>Editor</a></li>
+        <li><a href="http://after12am.github.com/Alumni" target="_blank" title="project named 'Alumni' to generate 3d structures in real time">Alumni</a></li>
+      </ul>
+    </nav>
+    <div id="copyright">
+      <p>
+        &copy; 2013 <a href="https://github.com/after12am/eisenscript">eisenscript</a><br />
+        Images: <a href="http://n33.co">n33</a>, <a href="http://fotogrph.com">fotogrph</a>, <a href="http://iconify.it">Iconify.it</a>
+        Design: <a href="http://html5up.net/">HTML5 UP</a>
+      </p>
+    </div>
+  </div>
+</div>
+<script type="text/eisenscript" id="move-x-template">
+{ a .5 color #333 } box
+{ x 2 } box
+</script>
+<script type="text/eisenscript" id="move-y-template">
+{ a .5 color #333 } box
+{ y 2 } box
+</script>
+<script type="text/eisenscript" id="move-z-template">
+{ a .5 color #333 } box
+{ z 2 } box
+</script>
+<script type="text/eisenscript" id="rotate-x-template">
+{ a .5 color #333 } box
+{ rx 45 } box
+</script>
+<script type="text/eisenscript" id="rotate-y-template">
+{ a .5 color #333 } box
+{ ry 45 } box
+</script>
+<script type="text/eisenscript" id="rotate-z-template">
+{ a .5 color #333 } box
+{ rz 45 } box
+</script>
+<script type="text/eisenscript" id="scale-template">
+{ a .5 color #333 } box
+{ s 10 } box
+</script>
+<script type="text/eisenscript" id="scale3-template">
+{ a .5 color #333 } box
+{ s 1 10 1 } box
+</script>
+<script type="text/eisenscript" id="matrix-template">
+{ a .5 color #333 } box
+{ m 1 0 0 0 1 0 0 0 1 } box
+// -> not good
+</script>
+<script type="text/eisenscript" id="hue-template">
+1 * { s .5 } 10 * { x 1 hue 36 } 10 * { y 1 hue 36 } 10 * { z 1 hue 36 } box
+</script>
+<script type="text/eisenscript" id="saturation-template">
+1 * { s .5 } 10 * { x 1 sat 0.9 } 10 * { y 1 sat 0.9 } 10 * { z 1 sat 0.9 } box
+</script>
+<script type="text/eisenscript" id="brightness-template">
+1 * { s .5 } 10 * { x 1 b 0.95 } 10 * { y 1 b 0.95 } 10 * { z 1 b 0.95 } box
+</script>
+<script type="text/eisenscript" id="alpha-template">
+1 * { s .5 } 10 * { x 1 a 0.8 } 10 * { y 1 a 0.8 } 10 * { z 1 a 0.8 } box
+// -> not good
+</script>
+<script type="text/eisenscript" id="color-template">
+{ a .5 color #333 } box
+10 * { x 1 color #f00 } box
+10 * { y 1 color #0f0 } box
+10 * { z 1 color #00f } box
+</script>
+<script type="text/eisenscript" id="blend-template">
+10 * { x 1 color #f00 } 10 * { y 1 blend #0f0 .04 } 10 * { z 1 blend #0f0 .04 } box
+</script>
+<script type="text/eisenscript" id="random-template">
+10 * { x 1 color random } 10 * { y 1 color random } 10 * { z 1 color random } box
+// -> got a error
+</script>
+<script type="text/eisenscript" id="color-scheme-template">
+// -> untested
+</script>
+<script src="scripts/app/vendors/underscore-min.js"></script>
+<script src="scripts/app/vendors/backbone-min.js"></script>
+<script src="scripts/app/vendors/three.min.js"></script>
+<script src="scripts/app/vendors/eisenscript.1.0.0.min.js"></script>
+<script src="scripts/app/vendors/codemirror.js"></script>
+<script src="scripts/app/vendors/extra.js"></script>
+<script src="scripts/app/vendors/eisenscript.js"></script>
+<script src="scripts/app/views/editor.js"></script>
+<script type="text/javascript">
+$(function() {
+  
+  var id = "#" + window.location.href.split('#')[1] + '-template';
+  if ($(id).length) console.warn('editor: specified template is not exist.');
+  
+  var editor = new Editor({
+    code: $(id).text().replace(/^\s/, '').replace(/\s$/, '')
+  });
+  
+  editor.render();
+});
+</script>
+</body>
+</html>

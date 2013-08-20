@@ -49,230 +49,140 @@
           </p>
           <h3>Transformations</h3>
           <p>
-            <script type="text/eisenscript" id="transform-x">
-            { x 10 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-x">
+            <div class="clearfix item">
               <dl>
-                <dt>x [float]</dt>
+                <dt>x [float]<a class="demo" href="editor.html#move-x">View Demo</a></dt>
                 <dd>Move on the x axis.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-y">
-            { y 10 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-y">
+            <div class="clearfix item">
               <dl>
-                <dt>y [float]</dt>
+                <dt>y [float]<a class="demo" href="editor.html#move-y">View Demo</a></dt>
                 <dd>Move on the y axis.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-z">
-            { z 10 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-z">
+            <div class="clearfix item">
               <dl>
-                <dt>z [float]</dt>
+                <dt>z [float]<a class="demo" href="editor.html#move-z">View Demo</a></dt>
                 <dd>Move on the z axis.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-rx">
-            { rx 45 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-rx">
+            <div class="clearfix item">
               <dl>
-                <dt>rx [float]</dt>
+                <dt>rx [float]<a class="demo" href="editor.html#rotate-x">View Demo</a></dt>
                 <dd>Rotation about the x axis.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-ry">
-            { ry 45 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-ry">
+            <div class="clearfix item">
               <dl>
-                <dt>ry [float]</dt>
+                <dt>ry [float]<a class="demo" href="editor.html#rotate-y">View Demo</a></dt>
                 <dd>Rotation about the y axis.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-rz">
-            { rz 45 s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-rz">
+            <div class="clearfix item">
               <dl>
-                <dt>rz [float]</dt>
+                <dt>rz [float]<a class="demo" href="editor.html#rotate-z">View Demo</a></dt>
                 <dd>Rotation about the z axis.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-s">
-            { s 10 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-s">
+            <div class="clearfix item">
               <dl>
-                <dt>s [float]</dt>
+                <dt>s [float]<a class="demo" href="editor.html#scale">View Demo</a></dt>
                 <dd>Scale in the x, y and z axis by the same amount.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-s3">
-            { s 1 10 1 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-s3">
+            <div class="clearfix item">
               <dl>
-                <dt>s [float] [float] [float]</dt>
+                <dt>s [float] [float] [float]<a class="demo" href="editor.html#scale3">View Demo</a></dt>
                 <dd>Scale in the x, y and z axis independently.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="transform-matrix">
-            { m 1 0 0 0 1 0 0 0 1 } box
-            // -> not good
-            </script>
-            <div class="clearfix item" data-bind-id="#transform-matrix">
+            <div class="clearfix item">
               <dl>
-                <dt>m [f1] ... [f9]</dt>
+                <dt>m [f1] ... [f9]<a class="demo" href="editor.html#matrix">View Demo</a></dt>
                 <dd>Applies the specified 3x3 rotation matrix to the transformation matrix for the current state. About the argument order: [f1],[f2],[f3] defines the first row of the matrix.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <h3>Color space transformations</h3>
           <p>
-            <script type="text/eisenscript" id="color-hue">
-            10 * { x 1 hue 36 } 10 * { y 1 hue 36 } 10 * { z 1 hue 36 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#color-hue">
+            <div class="clearfix item">
               <dl>
-                <dt>h / hue [float]</dt>
+                <dt>h / hue [float]<a class="demo" href="editor.html#hue">View Demo</a></dt>
                 <dd>Add num to the hue value, wrapping from 360° to 0°.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-sat">
-            10 * { x 1 sat 0.9 } 10 * { y 1 sat 0.9 } 10 * { z 1 sat 0.9 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#color-sat">
+            <div class="clearfix item">
               <dl>
-                <dt>sat [float]</dt>
+                <dt>sat [float]<a class="demo" href="editor.html#saturation">View Demo</a></dt>
                 <dd>Add num to the saturation value, wrapping from 0 to 1.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-brightness">
-            10 * { x 1 b 0.95 } 10 * { y 1 b 0.95 } 10 * { z 1 b 0.95 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#color-brightness">
+            <div class="clearfix item">
               <dl>
-                <dt>b / brightness [float]</dt>
+                <dt>b / brightness [float]<a class="demo" href="editor.html#brightness">View Demo</a></dt>
+                <dd>Add num to the brightness value, wrapping from 0 to 1.</dd>
+              </dl> 
+            </div>
+          </p>
+          <p>
+            <div class="clearfix item">
+              <dl>
+                <dt>a / alpha [float]<a class="demo" href="editor.html#alpha">View Demo</a></dt>
                 <dd>Add num to the brightness value, wrapping from 0 to 1.</dd>
               </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-alpha">
-            10 * { x 1 a 0.8 } 10 * { y 1 a 0.8 } 10 * { z 1 a 0.8 } box
-            // -> not good
-            </script>
-            <div class="clearfix item" data-bind-id="#color-alpha">
+            <div class="clearfix item">
               <dl>
-                <dt>a / alpha [float]</dt>
-                <dd>Add num to the brightness value, wrapping from 0 to 1.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
-            </div>
-          </p>
-          <p>
-            <script type="text/eisenscript" id="color-color">
-            10 * { x 1 color #f00 } box
-            10 * { y 1 color #0f0 } box
-            10 * { z 1 color #00f } box
-            </script>
-            <div class="clearfix item" data-bind-id="#color-color">
-              <dl>
-                <dt>color [color]</dt>
+                <dt>color [color]<a class="demo" href="editor.html#color">View Demo</a></dt>
                 <dd>Set specified color.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-blend">
-            10 * { x 1 color #f00 } 10 * { y 1 blend #0f0 .04 } 10 * { z 1 blend #0f0 .04 } box
-            </script>
-            <div class="clearfix item" data-bind-id="#color-blend">
+            <div class="clearfix item">
               <dl>
-                <dt>blend [color] [strength]</dt>
+                <dt>blend [color] [strength]<a class="demo" href="editor.html#blend">View Demo</a></dt>
                 <dd>Blends the current color with the specified color.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-color-random">
-            10 * { x 1 color random } 10 * { y 1 color random } 10 * { z 1 color random } box
-            // -> got a error
-            </script>
-            <div class="clearfix item" data-bind-id="#color-color-random">
+            <div class="clearfix item">
               <dl>
-                <dt>set color random</dt>
+                <dt>set color random<a class="demo" href="editor.html#random">View Demo</a></dt>
                 <dd>Chooses a random color.</dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
           <p>
-            <script type="text/eisenscript" id="color-color-scheme">
-            // -> untested
-            </script>
-            <div class="clearfix item" data-bind-id="#color-color-scheme">
+            <div class="clearfix item">
               <dl>
-                <dt>set colorpool [scheme]</dt>
+                <dt>set colorpool [scheme]<a class="demo" href="editor.html#color-scheme">View Demo</a></dt>
                 <dd></dd>
-              </dl>
-              <div class="demo"></div>
-              <div class="code"></div>
+              </dl> 
             </div>
           </p>
         </article>
@@ -298,14 +208,5 @@
       </div>
     </div>
   </div>
-<script src="scripts/app/vendors/underscore-min.js"></script>
-<script src="scripts/app/vendors/backbone-min.js"></script>
-<script src="scripts/app/vendors/three.min.js"></script>
-<script src="scripts/app/vendors/eisenscript.1.0.0.min.js"></script>
-<script src="scripts/app/vendors/codemirror.js"></script>
-<script src="scripts/app/vendors/extra.js"></script>
-<script src="scripts/app/vendors/eisenscript.js"></script>
-<script src="scripts/app/views/editor.js"></script>
-<script src="scripts/app/main.js"></script>
 </body>
 </html>

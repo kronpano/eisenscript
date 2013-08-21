@@ -12,10 +12,9 @@ var Editor = Backbone.View.extend({
   },
   
   resize: function() {
-    // var pad_top = (+$('#content').css('padding-top').replace('px', ''));
-    // var pad_bot = (+$('#content').css('padding-bottom').replace('px', ''));
+    var height = (+$('#sidebar').css('padding-top').replace('px', '')) + (+$('#sidebar').css('padding-bottom').replace('px', '')) + $('#logo').outerHeight(true) + $('#nav').outerHeight(true) + $('#copyright').outerHeight(true)
     this.$el.css({
-      height: $(window).height() - 1
+      height: height
     });
     $('#content').css('padding', 0);
   },

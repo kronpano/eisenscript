@@ -42,7 +42,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="reference.html">Reference</a></li>
         <li class="current_page_item"><a>Editor</a></li>
-        <li><a href="http://after12am.github.com/Alumni" target="_blank" title="project named 'Alumni' to generate 3d structures in real time">Alumni</a></li>
+        <li><a href="http://after12am.github.com/alumni" target="_blank">Alumni</a></li>
       </ul>
     </nav>
     <div id="copyright">
@@ -130,14 +130,12 @@
 <script src="scripts/app/views/editor.js"></script>
 <script type="text/javascript">
 $(function() {
-  
   var id = "#" + window.location.href.split('#')[1] + '-template';
   if ($(id).length) console.warn('editor: specified template is not exist.');
   
   var editor = new Editor({
     code: $(id).text().replace(/^\s/, '').replace(/\s$/, '')
   });
-  
   editor.render();
 });
 </script>

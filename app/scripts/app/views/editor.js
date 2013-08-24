@@ -6,21 +6,25 @@ var Editor = Backbone.View.extend({
     this.option = option || {};
     this.queue;
     this.lock = false;
-    this.resize();
     this.setEditor();
     this.setCanvas();
+    this.resize();
   },
   
   resize: function() {
-    var height = (+$('#sidebar').css('padding-top').replace('px', '')) + (+$('#sidebar').css('padding-bottom').replace('px', '')) + $('#logo').outerHeight(true) + $('#nav').outerHeight(true) + $('#copyright').outerHeight(true)
-    this.$el.css({
-      height: height
-    });
-    $('#content').css('padding', 0);
+    var minH = this.maxHeight();
+    var h = minH > 300 ? minH : 300;
+    this.$el.css({ height: minH });
+    this.editor.setSize('auto', h);
+    this.renderer.resize(this.$el.width(), h);
   },
   
-  change: function(cm) {
-    this.render(cm.getValue());
+  maxHeight: function() {
+    return (+$('#sidebar').css('padding-top').replace('px', '')) + (+$('#sidebar').css('padding-bottom').replace('px', '')) + $('#logo').outerHeight(true) + $('#nav').outerHeight(true) + $('#copyright').outerHeight(true);
+  },
+  
+  change: function(codeMirror) {
+    this.render(codeMirror.getValue());
   },
   
   setEditor: function() {
@@ -31,9 +35,8 @@ var Editor = Backbone.View.extend({
       tabSize: 2,
       value: this.option.code || '{ a .5 color #333 } box\n{ x 2 } box',
       readOnly: false
-    })
-    // this.editor.setSize('auto', this.$el.height());
-    this.editor.setSize('auto', 'auto');
+    });
+    this.editor.setSize('auto', this.maxHeight());
     this.editor.on("change", $.proxy(this.change, this));
     return this;
   },

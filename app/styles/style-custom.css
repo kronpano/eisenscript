@@ -38,6 +38,7 @@ ul.require {
   height: 100%;
   position: absolute;
   overflow: hidden;
+  background-color: #fdf6e3;
 }
 
 #editor .editor {

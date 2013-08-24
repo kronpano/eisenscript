@@ -129,6 +129,8 @@
 <script src="scripts/app/views/editor.js"></script>
 <script type="text/javascript">
 $(function() {
+  $('#content').css('padding', 0);
+  
   var id = "#" + window.location.href.split('#')[1] + '-template';
   if ($(id).length) console.warn('editor: specified template is not exist.');
   
@@ -136,6 +138,8 @@ $(function() {
     code: $(id).text().replace(/^\s/, '').replace(/\s$/, '')
   });
   editor.render();
+  
+  $(window).resize($.proxy(editor.resize, editor));
 });
 </script>
 </body>

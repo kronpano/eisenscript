@@ -20,7 +20,8 @@ var Editor = Backbone.View.extend({
   },
   
   maxHeight: function() {
-    return (+$('#sidebar').css('padding-top').replace('px', '')) + (+$('#sidebar').css('padding-bottom').replace('px', '')) + $('#logo').outerHeight(true) + $('#nav').outerHeight(true) + $('#copyright').outerHeight(true);
+    var h = $(window).height(), min = 600;
+    return h > min ? h : min;
   },
   
   change: function(codeMirror) {

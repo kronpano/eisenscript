@@ -10,7 +10,7 @@
 
   body
   {
-    min-width: 1200px;
+    width: 980px;
   }
   
   input, textarea
@@ -135,11 +135,12 @@
   #content
   {
     padding: 3em 5em 8em 5em;
+    min-height: 600px;
   }
 
     body.left-sidebar #content
     {
-      margin-left: 21em; /* = sidebar width + 7 */
+      margin-left: 14em; /* = sidebar width + 7 */
     }
     
     body.right-sidebar #content

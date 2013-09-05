@@ -92,6 +92,7 @@
   #content
   {
     padding: 2em 3em 6em 3em;
+    min-height: 568px;
   }
 
     body.left-sidebar #content

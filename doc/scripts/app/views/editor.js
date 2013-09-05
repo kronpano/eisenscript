@@ -20,8 +20,7 @@ var Editor = Backbone.View.extend({
   },
   
   maxHeight: function() {
-    var h = $(window).height(), min = 600;
-    return h > min ? h : min;
+    return 568;
   },
   
   change: function(codeMirror) {

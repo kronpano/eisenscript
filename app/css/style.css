@@ -1,0 +1,288 @@
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+body {
+	/*background: #0d1424;*/
+	background: #000;
+	font: .81em/150% Arial, Helvetica, sans-serif;
+	border-top: 2px #fff solid;
+	color: #666;
+}
+a {
+	color: #026acb;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+
+/* list */
+ul, ol {
+	margin: 1em 0 1.4em 24px;
+	padding: 0;
+	line-height: 140%;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4em;
+/*	margin: 20px 0 .4em;
+*/	color: #000;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.1em;
+}
+h6 {
+	font-size: 1em;
+}
+
+/* reset webkit search input styles */
+input[type=search] {
+	-webkit-appearance: none;
+	outline: none;
+}
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+
+/************************************************************************************
+HEADER
+*************************************************************************************/
+header {
+	padding-left: 40px;
+	height: 100px;
+}
+
+header h1 {
+	color: #fff;
+	height: 100px;
+	line-height: 100px;
+	font-size: 142%;
+	letter-spacing: 0.1em;
+}
+
+header h1 a {
+    color: #fff;
+}
+
+header h1 a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+/************************************************************************************
+CANVAS
+*************************************************************************************/
+#canvas {
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	top: 100px;
+	z-index: -1;
+}
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+footer {
+	position: absolute;
+	bottom:  0;
+	padding-left: 40px;
+	height: 100px;
+}
+
+footer h3 {
+	color: #eee;
+	font-size: 11pt;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.hide {
+	display: none;
+}
+
+#size-info {
+	position: absolute;
+	top: 100px;
+	left: 40px;
+	color: #eee;
+}
+
+/************************************************************************************
+gui
+*************************************************************************************/
+/* dat.gui css property overriding */
+section.gui {
+	/*top: 43px !important;*/
+	top: 2px !important;
+}
+
+textarea::-webkit-scrollbar {
+	width: 5px;
+	background: #1A1A1A;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #676767;
+}
+
+textarea::-webkit-scrollbar-corner {
+	background: #000;
+}
+
+textarea {
+    background-color: #1A1A1A;
+    border-bottom: 1px solid #2C2C2C;
+    padding: 8px;
+}
+
+textarea.editor {
+	font-family: Menlo, Consolas, "Vera Mono", monospace;
+	font-size: 12px;
+	color: #eee;
+	border: 0;
+	width: 98%;
+	max-width: 98%;
+	height: 260px;
+	margin: 3px auto;
+}
+
+textarea.console {
+	font: 11px 'Lucida Grande', sans-serif;
+	color: #EEE;
+	border: 0;
+	width: 98%;
+	max-width: 98%;
+	height: 54px;
+	margin: 3px auto;
+	margin-top: -14px;
+}
+
+textarea.console.err {
+    color: #ff0000;
+}
+
+#editor ul {
+    margin-left: 6px;
+}
+
+#about {
+    background-color: rgba(0, 0, 0, 0.796875);
+    z-index: 1000;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: initial;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: initial;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: initial;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    display: block;
+    opacity: 1;
+}
+
+#about-inner {
+    -webkit-transition-property:
+    -webkit-transform, opacity;
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: ease-out, linear;
+    -webkit-transition-delay: initial, initial;
+    -webkit-transform: scale(1);
+    -moz-transition-property:
+    -moz-transform, opacity;
+    -moz-transition-duration: 0.2s, 0.2s;
+    -moz-transition-timing-function: ease-out, linear;
+    -moz-transition-delay: initial, initial;
+    -moz-transform: scale(1);
+    transition-property:
+    transform, opacity;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-out, linear;
+    transition-delay: initial, initial;
+    transform: scale(1);
+    display: none;
+    position: fixed; z-index: 1001;
+    top: 134px;
+    opacity: 1;
+}
+
+.dg.dialogue {
+    background-color: #222;
+    width: 460px !important;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.dg {
+    color: #EEE;
+    font: 11px 'Lucida Grande', sans-serif;
+    text-shadow: 0 -1px 0 #111;
+}
+
+/************************************************************************************
+CLEARFIX
+*************************************************************************************/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix { display: inline-block; }
+.clearfix { display: block; zoom: 1; }

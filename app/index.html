@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Almni</title>
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript" src="./js/contrib/jquery.1.4.1.min.js"></script>
+	<script type="text/javascript" src="./js/contrib/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="./js/contrib/mt.js"></script>
+	<script type="text/javascript" src="./js/contrib/dat.gui.js"></script>
+	<script type="text/javascript" src="./js/contrib/Detector.js"></script>
+	<script type="text/javascript" src="./js/contrib/Stats.js"></script>
+	<script type="text/javascript" src="./js/contrib/Three.js"></script>
+	<script type="text/javascript" src="./js/code.js"></script>
+	<script type="text/javascript" src="./js/ssjs.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript">
+	
+	window.onload = function() {
+		if (!Detector.webgl) {
+			alert('Sorry, but this browser doesn\'t support WebGL.');
+		} else {
+			setup();
+		}
+	}
+	
+	</script>
+</head>
+<body>
+    </div>
+	<section id="controller" class="dg ac gui"></section>
+	<article>
+        <header class="clearfix"><h1><a href="/">ALMNI</a></h1></header>
+		<section>
+			<article>
+				<p id="size-info"></p>
+				<section id="canvas"></section>
+			</article>
+		</section>
+		<footer>
+			<article id="stats">
+				<h3>FPS</h3>
+			</article>
+		</footer>
+	</article>
+    <div id="about" style="display: none;"></div>
+    
+    <div id="about-inner">
+        <div id="dg-save" class="dg dialogue">
+        </div>
+    </div>
+</body>
+</html>

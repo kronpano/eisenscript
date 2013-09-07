@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EDITOR</title>
+<link type="text/css" rel="stylesheet" href="./css/style.css">
+<script type="text/javascript" src="./js/contrib/jquery.1.4.1.min.js"></script>
+<script type="text/javascript" src="./js/contrib/dat.gui.js"></script>
+<script type="text/javascript" src="./js/code.js"></script>
+<script type="text/javascript" src="./js/editor.js"></script>
+
+<style type="text/css">
+
+body {
+    border-top: 0;
+    overflow: hidden;
+}
+
+#editor ul {
+    margin-top: -10px;
+}
+
+#editor ul li {
+    width: 94%;
+    padding-left: 8px;
+}
+
+p {
+    width: 94%;
+    margin-top: -22px;
+    padding-left: 14px;
+    color: #a1a1a1;
+    font-size: 11px;
+}
+
+</style>
+
+</head>
+<body>
+<section id="gui"></section>
+<section id="editor">
+    <ul>
+        <li>
+            <textarea class="editor"></textarea>
+        </li>
+        <li>
+            <textarea class="console" readonly="true">here is console</textarea>
+        </li>
+    </ul>
+    <p>press ctrl+s to render</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="../assets/script.js?t=820b7ffa"></script>
+    <title>torus</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-examplestorus">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><pre><code>set maxobjects 16000
+
+{ a 0.3 sat 0.5 } grinder
+set background #fff
+
+rule grinder {
+  36 * { rz 10 y 0.1 } 36 * { ry 10 z 1.2 b 0.99 h 12 } xbox
+}
+
+rule xbox {
+  { s 1.1 } grid
+  { b 0.7 color #eee a 0.2 } box
+}
+
+rule xbox {
+  { s 1.1 } grid
+  { b 0.7 color #fff a 0.3 } box
+}
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../examples/spiral.html"><span class="title">spiral</span></a></div>
+          <div class="right"><a href="../examples/tree.html"><span class="label">Next: </span><span class="title">tree</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="../index.html" class="link title  link-index">EisenScript</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Reference</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../reference/translation.html" class="link title  link-referencetranslation">translation</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/rotation.html" class="link title  link-referencerotation">rotation</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/primitives.html" class="link title  link-referenceprimitives">primitives</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title  link-referencerule-modifiers">rule modifiers</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Learning</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><span class="title">pipeline processing</span>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Examples</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../examples/alien.html" class="link title  link-examplesalien">alien</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title  link-examplesalphabet">alphabet</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title  link-examplesbloom">bloom</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/boxes.html" class="link title  link-examplesboxes">boxes</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/bubble.html" class="link title  link-examplesbubble">bubble</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/frames.html" class="link title  link-examplesframes">frames</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/milkcrown.html" class="link title  link-examplesmilkcrown">milkcrown</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/mondrian.html" class="link title  link-examplesmondrian">mondrian</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/nabla.html" class="link title  link-examplesnabla">nabla</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/octopod.html" class="link title  link-examplesoctopod">octopod</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/saturn.html" class="link title  link-examplessaturn">saturn</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/spiral.html" class="link title  link-examplesspiral">spiral</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/torus.html" class="link title -active link-examplestorus">torus</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/tree.html" class="link title  link-examplestree">tree</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,693 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "EisenScript",
+        "source": "docs/headline.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Notes",
+            "depth": 2,
+            "id": "notes"
+          },
+          {
+            "title": "License",
+            "depth": 2,
+            "id": "license"
+          }
+        ]
+      },
+      {
+        "title": "Reference",
+        "sections": [
+          {
+            "title": "translation",
+            "source": "docs/reference/translation.md",
+            "url": "reference/translation.html",
+            "slug": "referencetranslation",
+            "headings": [
+              {
+                "title": "x [float]",
+                "depth": 2,
+                "id": "x-float"
+              },
+              {
+                "title": "y [float]",
+                "depth": 2,
+                "id": "y-float"
+              },
+              {
+                "title": "z [float]",
+                "depth": 2,
+                "id": "z-float"
+              }
+            ]
+          },
+          {
+            "title": "rotation",
+            "source": "docs/reference/rotation.md",
+            "url": "reference/rotation.html",
+            "slug": "referencerotation",
+            "headings": [
+              {
+                "title": "rx [float]",
+                "depth": 2,
+                "id": "rx-float"
+              },
+              {
+                "title": "ry [float]",
+                "depth": 2,
+                "id": "ry-float"
+              },
+              {
+                "title": "rz [float]",
+                "depth": 2,
+                "id": "rz-float"
+              }
+            ]
+          },
+          {
+            "title": "scaling",
+            "source": "docs/reference/scaling.md",
+            "url": "reference/scaling.html",
+            "slug": "referencescaling",
+            "headings": [
+              {
+                "title": "s [float]",
+                "depth": 2,
+                "id": "s-float"
+              },
+              {
+                "title": "s [float] [float] [float]",
+                "depth": 2,
+                "id": "s-float-float-float"
+              }
+            ]
+          },
+          {
+            "title": "matrix",
+            "source": "docs/reference/matrix-transformations.md",
+            "url": "reference/matrix-transformations.html",
+            "slug": "referencematrix-transformations",
+            "headings": [
+              {
+                "title": "rotation",
+                "depth": 2,
+                "id": "rotation"
+              },
+              {
+                "title": "scaling",
+                "depth": 2,
+                "id": "scaling"
+              }
+            ]
+          },
+          {
+            "title": "color",
+            "source": "docs/reference/color_transformations.md",
+            "url": "reference/color_transformations.html",
+            "slug": "referencecolor_transformations",
+            "headings": [
+              {
+                "title": "h / hue [float]",
+                "depth": 2,
+                "id": "h-hue-float"
+              },
+              {
+                "title": "sat / saturation [float]",
+                "depth": 2,
+                "id": "sat-saturation-float"
+              },
+              {
+                "title": "b / brightness [float]",
+                "depth": 2,
+                "id": "b-brightness-float"
+              },
+              {
+                "title": "color [color]",
+                "depth": 2,
+                "id": "color-color"
+              },
+              {
+                "title": "blend [color] [strength]",
+                "depth": 2,
+                "id": "blend-color-strength"
+              },
+              {
+                "title": "random",
+                "depth": 2,
+                "id": "random"
+              }
+            ]
+          },
+          {
+            "title": "transparant",
+            "source": "docs/reference/transparant.md",
+            "url": "reference/transparant.html",
+            "slug": "referencetransparant",
+            "headings": [
+              {
+                "title": "a / alpha [float]",
+                "depth": 2,
+                "id": "a-alpha-float"
+              }
+            ]
+          },
+          {
+            "title": "primitives",
+            "source": "docs/reference/primitives.md",
+            "url": "reference/primitives.html",
+            "slug": "referenceprimitives",
+            "headings": [
+              {
+                "title": "box",
+                "depth": 2,
+                "id": "box"
+              },
+              {
+                "title": "grid",
+                "depth": 2,
+                "id": "grid"
+              },
+              {
+                "title": "sphere",
+                "depth": 2,
+                "id": "sphere"
+              }
+            ]
+          },
+          {
+            "title": "rule modifiers",
+            "source": "docs/reference/rule-modifiers.md",
+            "url": "reference/rule-modifiers.html",
+            "slug": "referencerule-modifiers",
+            "headings": [
+              {
+                "title": "md / maxdepth [integer]",
+                "depth": 2,
+                "id": "md-maxdepth-integer"
+              },
+              {
+                "title": "md / maxdepth [integer] > [rulename]",
+                "depth": 2,
+                "id": "md-maxdepth-integer-greater-rulename"
+              },
+              {
+                "title": "w / weight [float]",
+                "depth": 2,
+                "id": "w-weight-float"
+              }
+            ]
+          },
+          {
+            "title": "termination criteria",
+            "source": "docs/reference/termination-criteria.md",
+            "url": "reference/termination-criteria.html",
+            "slug": "referencetermination-criteria",
+            "headings": [
+              {
+                "title": "set maxdepth [integer]",
+                "depth": 2,
+                "id": "set-maxdepth-integer"
+              },
+              {
+                "title": "set maxobjects [integer]",
+                "depth": 2,
+                "id": "set-maxobjects-integer"
+              },
+              {
+                "title": "set minsize [float]",
+                "depth": 2,
+                "id": "set-minsize-float"
+              },
+              {
+                "title": "set maxsize [float]",
+                "depth": 2,
+                "id": "set-maxsize-float"
+              },
+              {
+                "title": "set seed [integer]",
+                "depth": 2,
+                "id": "set-seed-integer"
+              },
+              {
+                "title": "set background [color]",
+                "depth": 2,
+                "id": "set-background-color"
+              }
+            ]
+          },
+          {
+            "title": "preprocessor commands",
+            "source": "docs/reference/preprocessor-commands.md",
+            "url": "reference/preprocessor-commands.html",
+            "slug": "referencepreprocessor-commands",
+            "headings": [
+              {
+                "title": "#define varname value",
+                "depth": 2,
+                "id": "define-varname-value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Learning",
+        "sections": [
+          {
+            "title": "pipeline processing"
+          }
+        ]
+      },
+      {
+        "title": "Examples",
+        "sections": [
+          {
+            "title": "alien",
+            "source": "docs/examples/alien.md",
+            "url": "examples/alien.html",
+            "slug": "examplesalien"
+          },
+          {
+            "title": "alphabet",
+            "source": "docs/examples/alphabet.md",
+            "url": "examples/alphabet.html",
+            "slug": "examplesalphabet"
+          },
+          {
+            "title": "bloom",
+            "source": "docs/examples/bloom.md",
+            "url": "examples/bloom.html",
+            "slug": "examplesbloom"
+          },
+          {
+            "title": "boxes",
+            "source": "docs/examples/boxes.md",
+            "url": "examples/boxes.html",
+            "slug": "examplesboxes"
+          },
+          {
+            "title": "bubble",
+            "source": "docs/examples/bubble.md",
+            "url": "examples/bubble.html",
+            "slug": "examplesbubble"
+          },
+          {
+            "title": "frames",
+            "source": "docs/examples/frames.md",
+            "url": "examples/frames.html",
+            "slug": "examplesframes"
+          },
+          {
+            "title": "milkcrown",
+            "source": "docs/examples/milkcrown.md",
+            "url": "examples/milkcrown.html",
+            "slug": "examplesmilkcrown"
+          },
+          {
+            "title": "mondrian",
+            "source": "docs/examples/mondrian.md",
+            "url": "examples/mondrian.html",
+            "slug": "examplesmondrian"
+          },
+          {
+            "title": "nabla",
+            "source": "docs/examples/nabla.md",
+            "url": "examples/nabla.html",
+            "slug": "examplesnabla"
+          },
+          {
+            "title": "octopod",
+            "source": "docs/examples/octopod.md",
+            "url": "examples/octopod.html",
+            "slug": "examplesoctopod"
+          },
+          {
+            "title": "saturn",
+            "source": "docs/examples/saturn.md",
+            "url": "examples/saturn.html",
+            "slug": "examplessaturn"
+          },
+          {
+            "title": "spiral",
+            "source": "docs/examples/spiral.md",
+            "url": "examples/spiral.html",
+            "slug": "examplesspiral"
+          },
+          {
+            "title": "torus",
+            "source": "docs/examples/torus.md",
+            "url": "examples/torus.html",
+            "slug": "examplestorus"
+          },
+          {
+            "title": "tree",
+            "source": "docs/examples/tree.md",
+            "url": "examples/tree.html",
+            "slug": "examplestree"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "docs/headline.md",
+      "title": "EisenScript",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Notes",
+          "depth": 2,
+          "id": "notes"
+        },
+        {
+          "title": "License",
+          "depth": 2,
+          "id": "license"
+        }
+      ]
+    },
+    "reference/translation.html": {
+      "source": "docs/reference/translation.md",
+      "title": "translation",
+      "slug": "referencetranslation",
+      "headings": [
+        {
+          "title": "x [float]",
+          "depth": 2,
+          "id": "x-float"
+        },
+        {
+          "title": "y [float]",
+          "depth": 2,
+          "id": "y-float"
+        },
+        {
+          "title": "z [float]",
+          "depth": 2,
+          "id": "z-float"
+        }
+      ]
+    },
+    "reference/rotation.html": {
+      "source": "docs/reference/rotation.md",
+      "title": "rotation",
+      "slug": "referencerotation",
+      "headings": [
+        {
+          "title": "rx [float]",
+          "depth": 2,
+          "id": "rx-float"
+        },
+        {
+          "title": "ry [float]",
+          "depth": 2,
+          "id": "ry-float"
+        },
+        {
+          "title": "rz [float]",
+          "depth": 2,
+          "id": "rz-float"
+        }
+      ]
+    },
+    "reference/scaling.html": {
+      "source": "docs/reference/scaling.md",
+      "title": "scaling",
+      "slug": "referencescaling",
+      "headings": [
+        {
+          "title": "s [float]",
+          "depth": 2,
+          "id": "s-float"
+        },
+        {
+          "title": "s [float] [float] [float]",
+          "depth": 2,
+          "id": "s-float-float-float"
+        }
+      ]
+    },
+    "reference/matrix-transformations.html": {
+      "source": "docs/reference/matrix-transformations.md",
+      "title": "matrix",
+      "slug": "referencematrix-transformations",
+      "headings": [
+        {
+          "title": "rotation",
+          "depth": 2,
+          "id": "rotation"
+        },
+        {
+          "title": "scaling",
+          "depth": 2,
+          "id": "scaling"
+        }
+      ]
+    },
+    "reference/color_transformations.html": {
+      "source": "docs/reference/color_transformations.md",
+      "title": "color",
+      "slug": "referencecolor_transformations",
+      "headings": [
+        {
+          "title": "h / hue [float]",
+          "depth": 2,
+          "id": "h-hue-float"
+        },
+        {
+          "title": "sat / saturation [float]",
+          "depth": 2,
+          "id": "sat-saturation-float"
+        },
+        {
+          "title": "b / brightness [float]",
+          "depth": 2,
+          "id": "b-brightness-float"
+        },
+        {
+          "title": "color [color]",
+          "depth": 2,
+          "id": "color-color"
+        },
+        {
+          "title": "blend [color] [strength]",
+          "depth": 2,
+          "id": "blend-color-strength"
+        },
+        {
+          "title": "random",
+          "depth": 2,
+          "id": "random"
+        }
+      ]
+    },
+    "reference/transparant.html": {
+      "source": "docs/reference/transparant.md",
+      "title": "transparant",
+      "slug": "referencetransparant",
+      "headings": [
+        {
+          "title": "a / alpha [float]",
+          "depth": 2,
+          "id": "a-alpha-float"
+        }
+      ]
+    },
+    "reference/primitives.html": {
+      "source": "docs/reference/primitives.md",
+      "title": "primitives",
+      "slug": "referenceprimitives",
+      "headings": [
+        {
+          "title": "box",
+          "depth": 2,
+          "id": "box"
+        },
+        {
+          "title": "grid",
+          "depth": 2,
+          "id": "grid"
+        },
+        {
+          "title": "sphere",
+          "depth": 2,
+          "id": "sphere"
+        }
+      ]
+    },
+    "reference/rule-modifiers.html": {
+      "source": "docs/reference/rule-modifiers.md",
+      "title": "rule modifiers",
+      "slug": "referencerule-modifiers",
+      "headings": [
+        {
+          "title": "md / maxdepth [integer]",
+          "depth": 2,
+          "id": "md-maxdepth-integer"
+        },
+        {
+          "title": "md / maxdepth [integer] > [rulename]",
+          "depth": 2,
+          "id": "md-maxdepth-integer-greater-rulename"
+        },
+        {
+          "title": "w / weight [float]",
+          "depth": 2,
+          "id": "w-weight-float"
+        }
+      ]
+    },
+    "reference/termination-criteria.html": {
+      "source": "docs/reference/termination-criteria.md",
+      "title": "termination criteria",
+      "slug": "referencetermination-criteria",
+      "headings": [
+        {
+          "title": "set maxdepth [integer]",
+          "depth": 2,
+          "id": "set-maxdepth-integer"
+        },
+        {
+          "title": "set maxobjects [integer]",
+          "depth": 2,
+          "id": "set-maxobjects-integer"
+        },
+        {
+          "title": "set minsize [float]",
+          "depth": 2,
+          "id": "set-minsize-float"
+        },
+        {
+          "title": "set maxsize [float]",
+          "depth": 2,
+          "id": "set-maxsize-float"
+        },
+        {
+          "title": "set seed [integer]",
+          "depth": 2,
+          "id": "set-seed-integer"
+        },
+        {
+          "title": "set background [color]",
+          "depth": 2,
+          "id": "set-background-color"
+        }
+      ]
+    },
+    "reference/preprocessor-commands.html": {
+      "source": "docs/reference/preprocessor-commands.md",
+      "title": "preprocessor commands",
+      "slug": "referencepreprocessor-commands",
+      "headings": [
+        {
+          "title": "#define varname value",
+          "depth": 2,
+          "id": "define-varname-value"
+        }
+      ]
+    },
+    "examples/alien.html": {
+      "source": "docs/examples/alien.md",
+      "title": "alien",
+      "slug": "examplesalien"
+    },
+    "examples/alphabet.html": {
+      "source": "docs/examples/alphabet.md",
+      "title": "alphabet",
+      "slug": "examplesalphabet"
+    },
+    "examples/bloom.html": {
+      "source": "docs/examples/bloom.md",
+      "title": "bloom",
+      "slug": "examplesbloom"
+    },
+    "examples/boxes.html": {
+      "source": "docs/examples/boxes.md",
+      "title": "boxes",
+      "slug": "examplesboxes"
+    },
+    "examples/bubble.html": {
+      "source": "docs/examples/bubble.md",
+      "title": "bubble",
+      "slug": "examplesbubble"
+    },
+    "examples/frames.html": {
+      "source": "docs/examples/frames.md",
+      "title": "frames",
+      "slug": "examplesframes"
+    },
+    "examples/milkcrown.html": {
+      "source": "docs/examples/milkcrown.md",
+      "title": "milkcrown",
+      "slug": "examplesmilkcrown"
+    },
+    "examples/mondrian.html": {
+      "source": "docs/examples/mondrian.md",
+      "title": "mondrian",
+      "slug": "examplesmondrian"
+    },
+    "examples/nabla.html": {
+      "source": "docs/examples/nabla.md",
+      "title": "nabla",
+      "slug": "examplesnabla"
+    },
+    "examples/octopod.html": {
+      "source": "docs/examples/octopod.md",
+      "title": "octopod",
+      "slug": "examplesoctopod"
+    },
+    "examples/saturn.html": {
+      "source": "docs/examples/saturn.md",
+      "title": "saturn",
+      "slug": "examplessaturn"
+    },
+    "examples/spiral.html": {
+      "source": "docs/examples/spiral.md",
+      "title": "spiral",
+      "slug": "examplesspiral"
+    },
+    "examples/torus.html": {
+      "source": "docs/examples/torus.md",
+      "title": "torus",
+      "slug": "examplestorus"
+    },
+    "examples/tree.html": {
+      "source": "docs/examples/tree.md",
+      "title": "tree",
+      "slug": "examplestree"
+    }
+  },
+  "sources": {
+    "docs/headline.md": "index.html",
+    "docs/reference/translation.md": "reference/translation.html",
+    "docs/reference/rotation.md": "reference/rotation.html",
+    "docs/reference/scaling.md": "reference/scaling.html",
+    "docs/reference/matrix-transformations.md": "reference/matrix-transformations.html",
+    "docs/reference/color_transformations.md": "reference/color_transformations.html",
+    "docs/reference/transparant.md": "reference/transparant.html",
+    "docs/reference/primitives.md": "reference/primitives.html",
+    "docs/reference/rule-modifiers.md": "reference/rule-modifiers.html",
+    "docs/reference/termination-criteria.md": "reference/termination-criteria.html",
+    "docs/reference/preprocessor-commands.md": "reference/preprocessor-commands.html",
+    "docs/examples/alien.md": "examples/alien.html",
+    "docs/examples/alphabet.md": "examples/alphabet.html",
+    "docs/examples/bloom.md": "examples/bloom.html",
+    "docs/examples/boxes.md": "examples/boxes.html",
+    "docs/examples/bubble.md": "examples/bubble.html",
+    "docs/examples/frames.md": "examples/frames.html",
+    "docs/examples/milkcrown.md": "examples/milkcrown.html",
+    "docs/examples/mondrian.md": "examples/mondrian.html",
+    "docs/examples/nabla.md": "examples/nabla.html",
+    "docs/examples/octopod.md": "examples/octopod.html",
+    "docs/examples/saturn.md": "examples/saturn.html",
+    "docs/examples/spiral.md": "examples/spiral.html",
+    "docs/examples/torus.md": "examples/torus.html",
+    "docs/examples/tree.md": "examples/tree.html",
+    "docs/docpress.json": "docpress.json"
+  }
+}

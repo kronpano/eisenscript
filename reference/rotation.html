@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="../assets/script.js?t=820b7ffa"></script>
+    <title>rotation</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-referencerotation">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="rotation">Rotation</h1>
+<p>A rotation is a transformation that is performed by &#x201C;spinning&#x201D; the object around a fixed point.</p>
+<h2 id="rx-float">rx [float]</h2>
+<p>Rotation about the x axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ rx 45 } box
+{ rx 90.0 } box
+</code></pre>
+<h2 id="ry-float">ry [float]</h2>
+<p>Rotation about the y axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ ry 45 } box
+{ ry 90.0 } box
+</code></pre>
+<h2 id="rz-float">rz [float]</h2>
+<p>Rotation about the z axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ rz 45 } box
+{ rz 90.0 } box
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../reference/translation.html"><span class="title">translation</span></a></div>
+          <div class="right"><a href="../reference/scaling.html"><span class="label">Next: </span><span class="title">scaling</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="../index.html" class="link title  link-index">EisenScript</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Reference</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../reference/translation.html" class="link title  link-referencetranslation">translation</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/rotation.html" class="link title -active link-referencerotation">rotation</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#rx-float" class="hlink link-rx-float">rx [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#ry-float" class="hlink link-ry-float">ry [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#rz-float" class="hlink link-rz-float">rz [float]</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/primitives.html" class="link title  link-referenceprimitives">primitives</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title  link-referencerule-modifiers">rule modifiers</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Learning</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><span class="title">pipeline processing</span>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Examples</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../examples/alien.html" class="link title  link-examplesalien">alien</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title  link-examplesalphabet">alphabet</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title  link-examplesbloom">bloom</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/boxes.html" class="link title  link-examplesboxes">boxes</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/bubble.html" class="link title  link-examplesbubble">bubble</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/frames.html" class="link title  link-examplesframes">frames</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/milkcrown.html" class="link title  link-examplesmilkcrown">milkcrown</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/mondrian.html" class="link title  link-examplesmondrian">mondrian</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/nabla.html" class="link title  link-examplesnabla">nabla</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/octopod.html" class="link title  link-examplesoctopod">octopod</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/saturn.html" class="link title  link-examplessaturn">saturn</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/spiral.html" class="link title  link-examplesspiral">spiral</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/torus.html" class="link title  link-examplestorus">torus</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../examples/tree.html" class="link title  link-examplestree">tree</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

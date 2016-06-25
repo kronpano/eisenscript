@@ -5,80 +5,40 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>mondrian</title>
+    <title>rotation</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-examplesmondrian">
+      <div class="body page-referencerotation">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><pre><code>/*
-Mondrian Cube. MHC 2007.
-
-Has a few rendering bugs...
-*/
-mondrian
-
-rule mondrian {
-  // The six faces of the cube
-  a2
-  { x -0.5 z -0.5 ry 90 } a2
-  { x +0.5 z -0.5 ry 90 } a2
-  { z -1 } a2
-  { y +0.5 z -0.5 rx 90 } a2
-  { y -0.5 z -0.5 rx 90 } a2
-}
-
-rule a2 w 2 maxdepth 2 &gt; d {
-  // Split into two halves in x direction
-  { s 0.333 1 1 x -1 } a2
-  { s 0.666 1 1 x 0.26 } a2
-}
-
-rule a2 w 2 maxdepth 2 &gt; d {
-  // Split into two halves in y direction
-  { s 1 0.333 1 y -1 } a2
-  { s 1 0.666 1 y 0.26 } a2
-}
-
-rule a2 { d }
-
-// This rule chooses a random color.
-rule d {
-  { s 1 1 0.02 color #FF0000 } square
-}
-
-rule d {
-  { s 1 1 0.02 color #0404A2 } square
-}
-
-rule d {
-  { s 1 1 0.02 color #FFFE33 } square
-}
-
-rule d w 2 {
-  { s 1 1 0.02 color #FFFFFF } square
-}
-
-// Draws a framed square
-rule square {
-  { s 0.95 0.95 1 } box
-  { s 0.05 1.00 1 b 0 x -10 } box
-  { s 0.05 1.00 1 b 0 x  10 } box
-  { s 1.05 0.05 1 b 0 y -10 } box
-  { s 1.05 0.05 1 b 0 y  10 } box
-}
+        <div class="markdown-body"><h1 id="rotation">Rotation</h1>
+<p>A rotation is a transformation that is performed by &#x201C;spinning&#x201D; the primitive around a fixed point.</p>
+<h2 id="rx-float">rx [float]</h2>
+<p>Rotation about the x axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ rx 45 } box
+{ rx 90.0 } box
+</code></pre>
+<h2 id="ry-float">ry [float]</h2>
+<p>Rotation about the y axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ ry 45 } box
+{ ry 90.0 } box
+</code></pre>
+<h2 id="rz-float">rz [float]</h2>
+<p>Rotation about the z axis. The &#x2018;float&#x2019; argument is the angle specified in degrees. The rotation axis is centered at the unit cube in the local coordinate system: that is the rotation axis contains the line segment from (0, 0.5, 0.5) -&gt; (1, 0.5, 0.5).</p>
+<pre><code>{ rz 45 } box
+{ rz 90.0 } box
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../examples/milkcrown.html"><span class="title">milkcrown</span></a></div>
-          <div class="right"><a href="../examples/nabla.html"><span class="label">Next: </span><span class="title">nabla</span></a></div>
+          <div class="left"><a href="../reference/translation.html"><span class="title">translation</span></a></div>
+          <div class="right"><a href="../reference/scaling.html"><span class="label">Next: </span><span class="title">scaling</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -90,13 +50,21 @@ rule square {
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="../reference/translation.html" class="link title  link-referencetranslation">translation</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/rotation.html" class="link title  link-referencerotation">rotation</a>
+                <li class="menu-item -level-2"><a href="../reference/rotation.html" class="link title -active link-referencerotation">rotation</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#rx-float" class="hlink link-rx-float">rx [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#ry-float" class="hlink link-ry-float">ry [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#rz-float" class="hlink link-rz-float">rz [float]</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -106,7 +74,7 @@ rule square {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -132,7 +100,7 @@ rule square {
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/milkcrown.html" class="link title  link-examplesmilkcrown">milkcrown</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/mondrian.html" class="link title -active link-examplesmondrian">mondrian</a>
+                <li class="menu-item -level-2"><a href="../examples/mondrian.html" class="link title  link-examplesmondrian">mondrian</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/nabla.html" class="link title  link-examplesnabla">nabla</a>
                 </li>

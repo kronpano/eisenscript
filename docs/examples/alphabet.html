@@ -5,60 +5,71 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>nabla</title>
+    <title>alphabet</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-examplesnabla">
+      <div class="body page-examplesalphabet">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><pre><code>set seed 57
-set maxdepth 10
+        <div class="markdown-body"><pre><code>/*
+  @author satoshi okami
+*/
+F
 
-1 * { x -2 y -6 } 10 * { x 4 } 10 * { y 4 } 1 * { ry -90 b 0.2 } R1
-
-rule R1 {
-  dbox { z 0.6 rx 5 } R1
+rule F {
+  { y -1.1 * 0  } R7
+  { y -1.1 * 1  } R7
+  { y -1.1 * 2  } R2
+  { y -1.1 * 3  } R2
+  { y -1.1 * 4  } R2
+  { y -1.1 * 5  } R2
+  { y -1.1 * 6  } R5
+  { y -1.1 * 7  } R5
+  { y -1.1 * 8  } R2
+  { y -1.1 * 9  } R2
+  { y -1.1 * 10 } R2
+  { y -1.1 * 11 } R2
 }
 
 rule R1 {
-  dbox { z 0.5 rx -90 } R1
+  1 * { x 1.1 } box
 }
 
-rule R1 {
-  dbox { z 0.6 rz 90 } R1
+rule R2 {
+  2 * { x 1.1 } box
 }
 
-rule R1 {
-  dbox { z 0.6 rz -90 } R1
+rule R3 {
+  3 * { x 1.1 } box
 }
 
-rule R1 weight 0.01 {
-
+rule R4 {
+  4 * { x 1.1 } box
 }
 
-rule dbox {
-  { color random s 2 2 0.5 } box
+rule R5 {
+  5 * { x 1.1 } box
 }
 
-rule dbox weight 0.5 {
-  { ry 90 s 0.5 1 1 } R1
+rule R6 {
+  6 * { x 1.1 } box
 }
 
-rule dbox weight 0.5 {
- { rx 90 s 0.5 2 1 } R1
+rule R7 {
+  7 * { x 1.1 } box
 }
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../examples/mondrian.html"><span class="title">mondrian</span></a></div>
-          <div class="right"><a href="../examples/octopod.html"><span class="label">Next: </span><span class="title">octopod</span></a></div>
+          <div class="left"><a href="../examples/alien.html"><span class="title">alien</span></a></div>
+          <div class="right"><a href="../examples/bloom.html"><span class="label">Next: </span><span class="title">bloom</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -74,9 +85,9 @@ rule dbox weight 0.5 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -86,7 +97,7 @@ rule dbox weight 0.5 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -100,7 +111,7 @@ rule dbox weight 0.5 {
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="../examples/alien.html" class="link title  link-examplesalien">alien</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title  link-examplesalphabet">alphabet</a>
+                <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title -active link-examplesalphabet">alphabet</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title  link-examplesbloom">bloom</a>
                 </li>
@@ -114,7 +125,7 @@ rule dbox weight 0.5 {
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/mondrian.html" class="link title  link-examplesmondrian">mondrian</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/nabla.html" class="link title -active link-examplesnabla">nabla</a>
+                <li class="menu-item -level-2"><a href="../examples/nabla.html" class="link title  link-examplesnabla">nabla</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/octopod.html" class="link title  link-examplesoctopod">octopod</a>
                 </li>

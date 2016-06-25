@@ -5,46 +5,59 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>alien</title>
+    <title>boxes</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-examplesalien">
+      <div class="body page-examplesboxes">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><pre><code>/*
-  @author nicolas barradeau
-*/
-set background #FFFFFF
-set maxobjects  5400
+        <div class="markdown-body"><pre><code>set maxdepth 600
+set background #333
+{ h 30 sat 0.2 h -67 b 0.8 } spiral
 
-//ground
-{ s 100 0.01 100 y -10 color #FFF } box
-
-40 * {   y 0.1 ry 9 rz -2 s 1.01 1.01 1.01 color #f00 } column
-
-rule column w 0.5 {
-  { y 0.5 ry 18 blend #ff0 0.1 } box
+rule spiral w 100 {
+  box2
+  { y 0.4 rx 90 hue 1 s 0.995 b 0.999 } spiral
 }
 
-rule column w 0.2 {
-  { x -0.25 z -0.25 y 0.5 s 0.8 blend #ff0 0.1 } box
+rule spiral w 100 {
+  box2
+  { y 0.4 rx 90 hue -1 rz -90 s 0.995 b 0.999 } spiral
 }
 
-rule column w 0.2 {
-  20 * { rx 1 ry 1.5 rz 3 s 0.75 0.95 1.10 color #ff0 } box
+rule spiral w 100 {
+  box2
+  { y 0.4 rx 90 hue 0 rz 90 s 0.995 b 0.995 } spiral
+}
+
+rule spiral w 3 {
+  { rz 5 s 1 1 1 } spiral
+  { ry 4 h 3 s 1 1 1 } spiral
+}
+
+rule box2 {
+  { s 1 5 1 } box
+}
+
+rule box2 {
+  { s 5 1 1 } box
+}
+
+rule box2 {
+
 }
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../reference/preprocessor-commands.html"><span class="title">preprocessor commands</span></a></div>
-          <div class="right"><a href="../examples/alphabet.html"><span class="label">Next: </span><span class="title">alphabet</span></a></div>
+          <div class="left"><a href="../examples/bloom.html"><span class="title">bloom</span></a></div>
+          <div class="right"><a href="../examples/bubble.html"><span class="label">Next: </span><span class="title">bubble</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -60,9 +73,9 @@ rule column w 0.2 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -72,7 +85,7 @@ rule column w 0.2 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -84,13 +97,13 @@ rule column w 0.2 {
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Examples</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../examples/alien.html" class="link title -active link-examplesalien">alien</a>
+                <li class="menu-item -level-2"><a href="../examples/alien.html" class="link title  link-examplesalien">alien</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title  link-examplesalphabet">alphabet</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title  link-examplesbloom">bloom</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/boxes.html" class="link title  link-examplesboxes">boxes</a>
+                <li class="menu-item -level-2"><a href="../examples/boxes.html" class="link title -active link-examplesboxes">boxes</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/bubble.html" class="link title  link-examplesbubble">bubble</a>
                 </li>

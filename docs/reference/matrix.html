@@ -5,59 +5,50 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>color</title>
+    <title>matrix</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-referencecolor_transformations">
+      <div class="body page-referencematrix">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="color-transformations">Color transformations</h1>
-<h2 id="h-hue-float">h / hue [float]</h2>
-<p>Adds the &#x2018;float&#x2019; value to the hue color parameter for the current state. Hues are measured from 0 to 360 and wraps cyclicly - i.e. a hue of 400 is equal to a hue of 40.</p>
-<pre><code>36 * { x .2 hue 2 } box
-</code></pre>
-<h2 id="sat-saturation-float">sat / saturation [float]</h2>
-<p>Multiplies the &#x2018;float&#x2019; value with the saturation color parameter for the current state. Saturation is measured from 0 to 1 and is clamped to this interval (i.e. values larger then 1 are set to 1).</p>
-<pre><code>36 * { x .2 sat .9 } box
-</code></pre>
-<h2 id="b-brightness-float">b / brightness [float]</h2>
-<p>Multiples the &#x2018;float&#x2019; value with the brightness color parameter for the current state. Brightness is measured from 0 to 1 and is clamped to this interval. Notice that parameter is sometimes called &#x2018;V&#x2019; or &#x2018;Value&#x2019; (and the color space is often refered to as <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSV</a>).</p>
-<pre><code>36 * { x .2 b 0.95 } box
-</code></pre>
-<h2 id="color-color">color [color]</h2>
-<p>This commands sets the color to an absolut color (most other transformations are relative modifications on the current state). Colors are specified as text-strings parsed using Qt&#x2019;s <a href="http://doc.trolltech.com/4.3/qcolor.html#setNamedColor">color parsing</a>, allowing for standard HTML RGB specifications (e.g. #F00 or #FF0000), but also SVG keyword names (e.g. red or even lightgoldenrodyellow)</p>
-<pre><code>{ x 1 color #f00 } box
-{ y 1 color #0f0 } box
-{ z 1 color #00f } box
-</code></pre>
-<h2 id="blend-color-strength">blend [color] [strength]</h2>
-<p>Blends the current color with the specified color. A strength of 1.0 will weight the current and new color evenly. Colors are mixed in HSV color space. Hue&#x2019;s will wrap around. Saturation and Value are clamped to [0,1]. Notice that since the mixing is performed in HSV space, the result may seems counterintuitive. For instance blending a red color into a blue color, may have intermediate green steps (since you are change the hue - so you will move around on the HSV color circle).</p>
-<pre><code>3 * { x 1 color #f00 } 3 * { y 1 blend #0f0 .1 } 3 * { z 1 blend #0f0 .1 } box
-</code></pre>
-<h2 id="random">random</h2>
-<p>Chooses a random color (using the current colorpool<!-- - see below -->).</p>
-<pre><code>3 * { x 1 color random } 3 * { y 1 color random } 3 * { z 1 color random } box
-</code></pre>
+        <div class="markdown-body"><h1 id="matrix-transformations">Matrix transformations</h1>
+<p>Applies the specified 3x3 rotation matrix to the transformation matrix for the current state. About the argument order: [f1],[f2],[f3] defines the first row of the matrix.</p>
 <!--
-set colorpool [scheme]
-Determines how random colors are drawn. The possible schemes are:
-randomhue - chooses a random hue, with full brighness and saturation.
-randomrgb - three independent random r,g, and b values.
-greyscale - random r=g=b.
-image:filename.png - color sampling. Chooses a random pixel from the specified image.
-list:orange,white,grey - chooses from the specified list of colors. A color may appear multiple times to increase its weight.
+#### m [f1] ... [f9]
+
+```
+{ m 1 0 0
+    0 1 0
+    0 0 1 } box
+```
+
+## translation
+
+A translation moves every point by a fixed distance in the same direction.
 -->
+<h2 id="rotation">rotation</h2>
+<p>A rotation is a transformation that is performed by &#x201C;spinning&#x201D; the object around a fixed point.</p>
+<pre><code>{ m 1 0 0
+    0 .53 -.85
+    0 .85 .53 } box
+</code></pre>
+<h2 id="scaling">scaling</h2>
+<p>A scaling is a linear transformation that enlarges or diminishes object.</p>
+<pre><code>{ m 2 0 0
+    0 2 0
+    0 0 2 } box
+</code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../reference/matrix-transformations.html"><span class="title">matrix</span></a></div>
-          <div class="right"><a href="../reference/transparant.html"><span class="label">Next: </span><span class="title">transparant</span></a></div>
+          <div class="left"><a href="../reference/scaling.html"><span class="title">scaling</span></a></div>
+          <div class="right"><a href="../reference/color.html"><span class="label">Next: </span><span class="title">color</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -73,23 +64,15 @@ list:orange,white,grey - chooses from the specified list of colors. A color may 
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title -active link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title -active link-referencematrix">matrix</a>
                   <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#h-hue-float" class="hlink link-h-hue-float">h / hue [float]</a>
+                    <li class="heading-item -depth-2"><a href="#rotation" class="hlink link-rotation">rotation</a>
                     </li>
-                    <li class="heading-item -depth-2"><a href="#sat-saturation-float" class="hlink link-sat-saturation-float">sat / saturation [float]</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#b-brightness-float" class="hlink link-b-brightness-float">b / brightness [float]</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#color-color" class="hlink link-color-color">color [color]</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#blend-color-strength" class="hlink link-blend-color-strength">blend [color] [strength]</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#random" class="hlink link-random">random</a>
+                    <li class="heading-item -depth-2"><a href="#scaling" class="hlink link-scaling">scaling</a>
                     </li>
                   </ul>
+                </li>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -99,7 +82,7 @@ list:orange,white,grey - chooses from the specified list of colors. A color may 
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>

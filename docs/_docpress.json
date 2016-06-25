@@ -88,9 +88,9 @@
           },
           {
             "title": "matrix",
-            "source": "docs/reference/matrix-transformations.md",
-            "url": "reference/matrix-transformations.html",
-            "slug": "referencematrix-transformations",
+            "source": "docs/reference/matrix.md",
+            "url": "reference/matrix.html",
+            "slug": "referencematrix",
             "headings": [
               {
                 "title": "rotation",
@@ -106,9 +106,9 @@
           },
           {
             "title": "color",
-            "source": "docs/reference/color_transformations.md",
-            "url": "reference/color_transformations.html",
-            "slug": "referencecolor_transformations",
+            "source": "docs/reference/color.md",
+            "url": "reference/color.html",
+            "slug": "referencecolor",
             "headings": [
               {
                 "title": "h / hue [float]",
@@ -240,7 +240,7 @@
             ]
           },
           {
-            "title": "preprocessor commands",
+            "title": "preprocessor",
             "source": "docs/reference/preprocessor-commands.md",
             "url": "reference/preprocessor-commands.html",
             "slug": "referencepreprocessor-commands",
@@ -432,10 +432,10 @@
         }
       ]
     },
-    "reference/matrix-transformations.html": {
-      "source": "docs/reference/matrix-transformations.md",
+    "reference/matrix.html": {
+      "source": "docs/reference/matrix.md",
       "title": "matrix",
-      "slug": "referencematrix-transformations",
+      "slug": "referencematrix",
       "headings": [
         {
           "title": "rotation",
@@ -449,10 +449,10 @@
         }
       ]
     },
-    "reference/color_transformations.html": {
-      "source": "docs/reference/color_transformations.md",
+    "reference/color.html": {
+      "source": "docs/reference/color.md",
       "title": "color",
-      "slug": "referencecolor_transformations",
+      "slug": "referencecolor",
       "headings": [
         {
           "title": "h / hue [float]",
@@ -581,7 +581,7 @@
     },
     "reference/preprocessor-commands.html": {
       "source": "docs/reference/preprocessor-commands.md",
-      "title": "preprocessor commands",
+      "title": "preprocessor",
       "slug": "referencepreprocessor-commands",
       "headings": [
         {
@@ -667,8 +667,8 @@
     "docs/reference/translation.md": "reference/translation.html",
     "docs/reference/rotation.md": "reference/rotation.html",
     "docs/reference/scaling.md": "reference/scaling.html",
-    "docs/reference/matrix-transformations.md": "reference/matrix-transformations.html",
-    "docs/reference/color_transformations.md": "reference/color_transformations.html",
+    "docs/reference/matrix.md": "reference/matrix.html",
+    "docs/reference/color.md": "reference/color.html",
     "docs/reference/transparant.md": "reference/transparant.html",
     "docs/reference/primitives.md": "reference/primitives.html",
     "docs/reference/rule-modifiers.md": "reference/rule-modifiers.html",

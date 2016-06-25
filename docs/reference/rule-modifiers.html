@@ -5,43 +5,56 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>scaling</title>
+    <title>rule modifiers</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-referencescaling">
+      <div class="body page-referencerule-modifiers">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="scaling">Scaling</h1>
-<p>A scaling is a linear transformation that enlarges or diminishes object.</p>
-<h2 id="s-float">s [float]</h2>
-<p>Resizes the local coordinate system. Notice that the center for the resize is located at the center of the unit cube in the local system (at (0.5,0.5,0.5)</p>
-<pre><code>{ x 2 s 2 } box
-{ s .5 } box
-</code></pre>
-<h2 id="s-float-float-float">s [float] [float] [float]</h2>
-<p>Resizes the local coordinate system. As above but with separate scale for each dimension.</p>
-<pre><code>{ s .5 1 1 } box
-{ s 1 .5 1 } box
-{ s 1 1 .5 } box
-</code></pre>
-<!--
-## sx [float]
+        <div class="markdown-body"><h1 id="rule-modifiers">Rule modifiers</h1>
+<h2 id="md-maxdepth-integer">md / maxdepth [integer]</h2>
+<p>Rule Retirement.Sets the maximum recursive for the rule. The rule would not execute any actions after this limit has been reached.</p>
+<pre><code>10 * { x 1 } R1
 
-## sy [float]
+rule R1 md 1 {
+  { color random } box
+}
+</code></pre>
+<h2 id="md-maxdepth-integer-greater-rulename">md / maxdepth [integer] &gt; [rulename]</h2>
+<p>Rule Retirement with substitution.Sets the maximum recursive for the rule. After this limit has been reached [rulename] will be executed instead this rule.</p>
+<pre><code>4 * { x 1 } R1
 
-## sz [float]
--->
+rule R1 md 1 &gt; R2 {
+  { color random } box
+}
+
+rule R2 {
+  { x 1 color random } box
+}
+</code></pre>
+<h2 id="w-weight-float">w / weight [float]</h2>
+<p>Ambiguous rules.If several rules are defined with the same name, a random definition is chosen according to the weight specified here. If no weight is specified, the default weight of 1 is used.</p>
+<pre><code>10 * { x 1 } R1
+
+rule R1 w 0.8 {
+  { color random } box
+}
+
+rule R1 w 0.2 {
+  { color #000 } box
+}
+</code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../reference/rotation.html"><span class="title">rotation</span></a></div>
-          <div class="right"><a href="../reference/matrix-transformations.html"><span class="label">Next: </span><span class="title">matrix</span></a></div>
+          <div class="left"><a href="../reference/primitives.html"><span class="title">primitives</span></a></div>
+          <div class="right"><a href="../reference/termination-criteria.html"><span class="label">Next: </span><span class="title">termination criteria</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -55,27 +68,29 @@
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/rotation.html" class="link title  link-referencerotation">rotation</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title -active link-referencescaling">scaling</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#s-float" class="hlink link-s-float">s [float]</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#s-float-float-float" class="hlink link-s-float-float-float">s [float] [float] [float]</a>
-                    </li>
-                  </ul>
+                <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/primitives.html" class="link title  link-referenceprimitives">primitives</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title  link-referencerule-modifiers">rule modifiers</a>
+                <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title -active link-referencerule-modifiers">rule modifiers</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#md-maxdepth-integer" class="hlink link-md-maxdepth-integer">md / maxdepth [integer]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#md-maxdepth-integer-greater-rulename" class="hlink link-md-maxdepth-integer-greater-rulename">md / maxdepth [integer] &gt; [rulename]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#w-weight-float" class="hlink link-w-weight-float">w / weight [float]</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>

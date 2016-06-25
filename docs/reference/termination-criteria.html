@@ -5,50 +5,53 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>matrix</title>
+    <title>termination criteria</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-referencematrix-transformations">
+      <div class="body page-referencetermination-criteria">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="matrix-transformations">Matrix transformations</h1>
-<p>Applies the specified 3x3 rotation matrix to the transformation matrix for the current state. About the argument order: [f1],[f2],[f3] defines the first row of the matrix.</p>
-<!--
-#### m [f1] ... [f9]
-
-```
-{ m 1 0 0
-    0 1 0
-    0 0 1 } box
-```
-
-## translation
-
-A translation moves every point by a fixed distance in the same direction.
--->
-<h2 id="rotation">rotation</h2>
-<p>A rotation is a transformation that is performed by &#x201C;spinning&#x201D; the object around a fixed point.</p>
-<pre><code>{ m 1 0 0
-    0 .53 -.85
-    0 .85 .53 } box
+        <div class="markdown-body"><h1 id="termination-criteria">Termination criteria</h1>
+<h2 id="set-maxdepth-integer">set maxdepth [integer]</h2>
+<p>Breaks after [integer] iterations (generations). This will also serve as a upper recursion limit for all rules.</p>
+<pre><code>set maxdepth 10
 </code></pre>
-<h2 id="scaling">scaling</h2>
-<p>A scaling is a linear transformation that enlarges or diminishes object.</p>
-<pre><code>{ m 2 0 0
-    0 2 0
-    0 0 2 } box
+<h2 id="set-maxobjects-integer">set maxobjects [integer]</h2>
+<p>After [integer] objects have been created, the construction is terminated.</p>
+<pre><code>set maxobjects  100
+</code></pre>
+<h2 id="set-minsize-float">set minsize [float]</h2>
+<p>Allows you to specify how large or small a given object can be before terminating. The &#x2018;size&#x2019; parameter refers to the length of the diagonal of a unit cube in the current local state. The initial coordinate frame goes from (0,0,0) to (1,1,1) and hence has a diagonal length of sqrt(3)~1.7). It is possible to specify both a mix and a min size. The termination criteria only stops the current branch - if other branches are still within a valid range, the will be continued.</p>
+<pre><code>set maxsize 10
+</code></pre>
+<h2 id="set-maxsize-float">set maxsize [float]</h2>
+<p>See above.</p>
+<pre><code>set maxsize 100
+</code></pre>
+<h2 id="set-seed-integer">set seed [integer]</h2>
+<p>Allows you to set the random seed. This makes it possible to reproduce creations.
+set seed initial
+This allows you to set the seed to its initial value (the value specified in the seed box). Notice that each rule call branch maintains its own sequence of random numbers. This makes it possible to generate the same set of random numbers as used earlier, making it possible to combine randomness with self-similarity.</p>
+<pre><code>set seed 20
+</code></pre>
+<h2 id="set-background-color">set background [color]</h2>
+<p>Allows you to set the background color. Colors are specified as text-strings parsed using Qt&#x2019;s color parsing, allowing for standard HTML RGB specifications (e.g. #F00 or #FF0000), but also SVG keyword names (e.g. red or even lightgoldenrodyellow).</p>
+<pre><code>set background #F00
+
+# also allows
+set background #FF0000
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../reference/scaling.html"><span class="title">scaling</span></a></div>
-          <div class="right"><a href="../reference/color_transformations.html"><span class="label">Next: </span><span class="title">color</span></a></div>
+          <div class="left"><a href="../reference/rule-modifiers.html"><span class="title">rule modifiers</span></a></div>
+          <div class="right"><a href="../reference/preprocessor-commands.html"><span class="label">Next: </span><span class="title">preprocessor</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -64,15 +67,9 @@ A translation moves every point by a fixed distance in the same direction.
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title -active link-referencematrix-transformations">matrix</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#rotation" class="hlink link-rotation">rotation</a>
-                    </li>
-                    <li class="heading-item -depth-2"><a href="#scaling" class="hlink link-scaling">scaling</a>
-                    </li>
-                  </ul>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -80,9 +77,23 @@ A translation moves every point by a fixed distance in the same direction.
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title  link-referencerule-modifiers">rule modifiers</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
+                <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title -active link-referencetermination-criteria">termination criteria</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#set-maxdepth-integer" class="hlink link-set-maxdepth-integer">set maxdepth [integer]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#set-maxobjects-integer" class="hlink link-set-maxobjects-integer">set maxobjects [integer]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#set-minsize-float" class="hlink link-set-minsize-float">set minsize [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#set-maxsize-float" class="hlink link-set-maxsize-float">set maxsize [float]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#set-seed-integer" class="hlink link-set-seed-integer">set seed [integer]</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#set-background-color" class="hlink link-set-background-color">set background [color]</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>

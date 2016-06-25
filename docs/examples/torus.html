@@ -5,40 +5,42 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>tree</title>
+    <title>torus</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-examplestree">
+      <div class="body page-examplestorus">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><pre><code>/*
-  @author Mikael Hvidtfeldt Christensen
-*/
-set maxdepth 600
+        <div class="markdown-body"><pre><code>set maxobjects 16000
 
-{ h 30 sat 0.7 } spiral
-{ ry 180 h 30 sat 0.7 } spiral
+{ a 0.3 sat 0.5 } grinder
+set background #fff
 
-rule spiral w 100 {
-  box
-  { y 0.4 rx 1 s 0.995 b 0.995 } spiral
+rule grinder {
+  36 * { rz 10 y 0.1 } 36 * { ry 10 z 1.2 b 0.99 h 12 } xbox
 }
 
-rule spiral w 1 {
-  spiral
-  { ry 180 h 3 } spiral
+rule xbox {
+  { s 1.1 } grid
+  { b 0.7 color #eee a 0.2 } box
+}
+
+rule xbox {
+  { s 1.1 } grid
+  { b 0.7 color #fff a 0.3 } box
 }
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../examples/torus.html"><span class="title">torus</span></a></div>
+          <div class="left"><a href="../examples/spiral.html"><span class="title">spiral</span></a></div>
+          <div class="right"><a href="../examples/tree.html"><span class="label">Next: </span><span class="title">tree</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -54,9 +56,9 @@ rule spiral w 1 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -66,7 +68,7 @@ rule spiral w 1 {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -102,9 +104,9 @@ rule spiral w 1 {
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/spiral.html" class="link title  link-examplesspiral">spiral</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/torus.html" class="link title  link-examplestorus">torus</a>
+                <li class="menu-item -level-2"><a href="../examples/torus.html" class="link title -active link-examplestorus">torus</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/tree.html" class="link title -active link-examplestree">tree</a>
+                <li class="menu-item -level-2"><a href="../examples/tree.html" class="link title  link-examplestree">tree</a>
                 </li>
               </ul>
             </li>

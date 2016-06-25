@@ -5,33 +5,52 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>preprocessor commands</title>
+    <title>saturn</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-referencepreprocessor-commands">
+      <div class="body page-examplessaturn">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="preprocessor-commands">Preprocessor commands</h1>
-<h2 id="define-varname-value">#define varname value</h2>
-<p>substitutes every occurrence of &#x2018;varname&#x2019; with &#x2018;value&#x2019;. Value may contain spaces.</p>
-<pre><code>#define PI 3.14
-</code></pre>
-<!--
-## #define varname value (float:0-40)
+        <div class="markdown-body"><pre><code>{ s 3 } saturn
 
-As above, but creates a pane with sliders for each of the variables defined. The values in the float-statement determines the lower and upper slider bounds. Example: '#define angle 14 (float:0-90)' will create a GUI slider for adjusting the angle parameter between 0 and 90.
--->
+rule saturn {
+  1 * { y -.5 } 1 * { s 8 y 0.08  color #e0e0e0  } sphere
+  1 * { y -.4 rz 20 } 36 * { ry 10 } 1 * { x 4.2 s 0.3 } R1
+}
+
+rule R1 {
+  1 * { x 1 } 1 * { y 2 } 3 * { z 1 } sph
+  1 * { x 2 } 3 * { y 1 } 3 * { z 1 } sph
+  1 * { x 3 } 1 * { y 2 } 0 * { z 1 } sph
+}
+
+rule sph {
+  { s 0.8 color random } sphere
+}
+
+rule sph {
+  { s 0.6 color random  } sphere
+}
+
+rule sph {
+  { s 0.4 color random  } sphere
+}
+
+rule sph {
+
+}
+</code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../reference/termination-criteria.html"><span class="title">termination criteria</span></a></div>
-          <div class="right"><a href="../examples/alien.html"><span class="label">Next: </span><span class="title">alien</span></a></div>
+          <div class="left"><a href="../examples/octopod.html"><span class="title">octopod</span></a></div>
+          <div class="right"><a href="../examples/spiral.html"><span class="label">Next: </span><span class="title">spiral</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -47,9 +66,9 @@ As above, but creates a pane with sliders for each of the variables defined. The
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
@@ -59,11 +78,7 @@ As above, but creates a pane with sliders for each of the variables defined. The
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title -active link-referencepreprocessor-commands">preprocessor commands</a>
-                  <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#define-varname-value" class="hlink link-define-varname-value">#define varname value</a>
-                    </li>
-                  </ul>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -95,7 +110,7 @@ As above, but creates a pane with sliders for each of the variables defined. The
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/octopod.html" class="link title  link-examplesoctopod">octopod</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/saturn.html" class="link title  link-examplessaturn">saturn</a>
+                <li class="menu-item -level-2"><a href="../examples/saturn.html" class="link title -active link-examplessaturn">saturn</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/spiral.html" class="link title  link-examplesspiral">spiral</a>
                 </li>

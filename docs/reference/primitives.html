@@ -5,38 +5,36 @@
     <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=820b7ffa"></script>
-    <title>bloom</title>
+    <title>primitives</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
-      <div class="body page-examplesbloom">
+      <div class="body page-referenceprimitives">
         <div class="header-nav">
           <div class="right"><a href="https://github.com/after12am/eisenscript" data-title="after12am/eisenscript" class="iconlink">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><pre><code>{ rx -90 s 4 } sakura
-
-rule sakura {
-  6 * { rz 60 } petal
-  { s 2 color #c10020 } sphere
-}
-
-rule petal {
-  1 * {  y 0.8 s 1 0.25 1 } 60 * { rx 0.1 y 0.1 s 1.01 } bbox
-}
-
-rule bbox {
-  { s 1 0.1 0.1 color #ce97b6  } box
-}
+        <div class="markdown-body"><h1 id="primitives">Primitives</h1>
+<h2 id="box">box</h2>
+<p>solid box.</p>
+<pre><code>{ x 1 } box
+</code></pre>
+<h2 id="grid">grid</h2>
+<p>wireframe box.</p>
+<pre><code>{ x 1 } grid
+</code></pre>
+<h2 id="sphere">sphere</h2>
+<p>the round thingy (as of now this primitive has some issues - e.g. ellipsoids are not working.).</p>
+<pre><code>{ x 1 } sphere
 </code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../examples/alphabet.html"><span class="title">alphabet</span></a></div>
-          <div class="right"><a href="../examples/boxes.html"><span class="label">Next: </span><span class="title">boxes</span></a></div>
+          <div class="left"><a href="../reference/transparant.html"><span class="title">transparant</span></a></div>
+          <div class="right"><a href="../reference/rule-modifiers.html"><span class="label">Next: </span><span class="title">rule modifiers</span></a></div>
         </div>
       </div>
       <div class="menu toc-menu">
@@ -52,19 +50,27 @@ rule bbox {
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/scaling.html" class="link title  link-referencescaling">scaling</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/matrix-transformations.html" class="link title  link-referencematrix-transformations">matrix</a>
+                <li class="menu-item -level-2"><a href="../reference/matrix.html" class="link title  link-referencematrix">matrix</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/color_transformations.html" class="link title  link-referencecolor_transformations">color</a>
+                <li class="menu-item -level-2"><a href="../reference/color.html" class="link title  link-referencecolor">color</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/transparant.html" class="link title  link-referencetransparant">transparant</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/primitives.html" class="link title  link-referenceprimitives">primitives</a>
+                <li class="menu-item -level-2"><a href="../reference/primitives.html" class="link title -active link-referenceprimitives">primitives</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#box" class="hlink link-box">box</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#grid" class="hlink link-grid">grid</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#sphere" class="hlink link-sphere">sphere</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/rule-modifiers.html" class="link title  link-referencerule-modifiers">rule modifiers</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../reference/termination-criteria.html" class="link title  link-referencetermination-criteria">termination criteria</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor commands</a>
+                <li class="menu-item -level-2"><a href="../reference/preprocessor-commands.html" class="link title  link-referencepreprocessor-commands">preprocessor</a>
                 </li>
               </ul>
             </li>
@@ -80,7 +86,7 @@ rule bbox {
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/alphabet.html" class="link title  link-examplesalphabet">alphabet</a>
                 </li>
-                <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title -active link-examplesbloom">bloom</a>
+                <li class="menu-item -level-2"><a href="../examples/bloom.html" class="link title  link-examplesbloom">bloom</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../examples/boxes.html" class="link title  link-examplesboxes">boxes</a>
                 </li>

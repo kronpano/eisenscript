@@ -3,12 +3,16 @@ eisenscript
 
 [![Build Status](https://travis-ci.org/after12am/eisenscript.svg?branch=master)](https://travis-ci.org/after12am/eisenscript)
 
+###first original demo
+
 [Demo](https://after12am.github.io/eisenscript-editor/)
 
-There is now a second demo which is based on my local changes - moved to new three.js version v81,
+###second extended demo 
+There is now a second demo which is based on my changes - moved to new three.js version v81,
 added a couple of geometries, and some examples.
-This live demo can be seen [here](https://playingwithstuff.000webhostapp.com/editor1/index.html)
+This [live demo can be seen here](https://playingwithstuff.000webhostapp.com/editor1/index.html)
 
+### about eisenscript
 EisenScript is a programming language designed by Mikael Hvidtfeldt for generating 3d structures.
 This language shows you that even a simple system has a big possibility to generate surprising
 and complex structures, and then brings a big amazing to you. A set of those structures, you would
